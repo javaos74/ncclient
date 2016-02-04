@@ -91,7 +91,7 @@ def add_ip_route(conn, routecfg):
 
 def remove_ip_route(conn, routecfg):
     try:
-        confstr = ADD_IP_ROUTE %(routecfg)
+        confstr = REMOVE_IP_ROUTE %(routecfg)
         rpc_obj = conn.edit_config(target='running', config=confstr)
         _check_response( rpc_obj, 'REMOVE_IP_ROUTE')
     except Exception:
