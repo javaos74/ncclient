@@ -29,13 +29,13 @@ class IosxeDeviceHandler(DefaultDeviceHandler):
 
     def add_additional_operations(self):
         dict = {}
-        dict["save_config"] = SaveConfig
+        #dict["save_config"] = SaveConfig
         return dict
         
     def add_additional_ssh_connect_params(self, kwargs):
         kwargs['allow_agent']   = False
         kwargs['look_for_keys'] = False
-        kwargs['unknown_host_cb'] = csr_unknown_host_cb
+        kwargs['unknown_host_cb'] = iosxe_unknown_host_cb
 
     def perform_qualify_check(self):
         return False

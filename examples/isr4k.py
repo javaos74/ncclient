@@ -31,19 +31,19 @@ log = logging.getLogger(__name__)
 # Various IOS Snippets
 
 ADD_IP_ROUTE = """
-<nc:config>
-    <nc:cli-config-data>
+<config>
+    <cli-config-data>
         <cmd>ip route %s</cmd>
-    </nc:cli-config-data>
-</nc:config>
+    </cli-config-data>
+</config>
 """
 
 REMOVE_IP_ROUTE = """
-<nc:config>
-    <nc:cli-config-data>
+<config>
+    <cli-config-data>
         <cmd>no ip route %s</cmd>
-    </nc:cli-config-data>
-</nc:config>
+    </cli-config-data>
+</config>
 """
 
 SHOW_IP_ROUTE = """
